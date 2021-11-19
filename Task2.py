@@ -15,7 +15,7 @@ def fibo():
         if result.get(n):
             return result.get(n)
         else:
-            for i in range(2,n+1):
+            for i in range(3,n+1):
                 a, b = b, a + b
             return b
     return wrap
@@ -31,12 +31,12 @@ def fibo_rec(n : int) -> int:
     return fibo_rec(n - 1) + fibo_rec(n - 2)
 
 start_rec = datetime.now()
-print(fibo_rec(35))
+print(fibo_rec(40))
 stop_rec = datetime.now()
 
 start_wrap = datetime.now()
 numbers = fibo()
-print(numbers(35))
+print(numbers(40))
 stop_wrap = datetime.now()
 
 print(f'Wrapped function complited in {stop_wrap-start_wrap}\n'
